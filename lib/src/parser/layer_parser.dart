@@ -25,31 +25,31 @@ class LayerParser {
   LayerParser._();
 
   static final JsonReaderOptions _names = JsonReaderOptions.of([
-    'nm', // 0
-    'ind', // 1
+    'nm', // Name, as seen from editors and the like
+    'ind', // Index that can be used for parenting and referenced in expressions
     'refId', // 2
-    'ty', // 3
+    'ty', // Layer type
     'parent', // 4
     'sw', // 5
     'sh', // 6
     'sc', // 7
-    'ks', // 8
+    'ks', // Transform stuff
     'tt', // 9
     'masksProperties', // 10
     'shapes', // 11
     't', // 12
     'ef', // 13
-    'sr', // 14
+    'sr', // Time stretch
     'st', // 15
     'w', // 16
     'h', // 17
     'ip', // 18
-    'op', // 19
+    'op', // Frame when the layer becomes invisible
     'tm', // 20
     'cl', // 21
-    'hd', // 22
+    'hd', // Hide the layer
     'ao', // 23
-    'bm', // 24
+    'bm', // Blend mode
   ]);
 
   static Layer parse(LottieComposition composition) {

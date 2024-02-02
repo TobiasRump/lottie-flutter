@@ -12,17 +12,17 @@ import 'moshi/json_reader.dart';
 
 class LottieCompositionParser {
   static final JsonReaderOptions _names = JsonReaderOptions.of([
-    'w', // 0
-    'h', // 1
-    'ip', // 2
-    'op', // 3
-    'fr', // 4
-    'v', // 5
-    'layers', // 6
-    'assets', // 7
-    'fonts', // 8
-    'chars', // 9
-    'markers' // 10
+    'w', // width
+    'h', // height
+    'ip', // inpoint (ab welchem Frame startet die Animation)
+    'op', //outpoint (ab welchem Frame endet die Animation)
+    'fr', // framerate
+    'v', // version
+    'layers', // Hier werden die Layer definiert
+    'assets', // Hier werden die Assets definiert
+    'fonts', // Hier werden die Fonts definiert
+    'chars', // Hier werden die Zeichen definiert
+    'markers' // Hier werden die Marker definiert
   ]);
 
   static LottieComposition parse(
